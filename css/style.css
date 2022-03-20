@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 5rem;
+    cursor: pointer;
+    margin: 3rem 0;
+}
+
+.menu-icon {
+    width: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 3rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #ff5ea2;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10rem 0;
+}
+
+.col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 5rem;  
+}
+
+.col-1 h2 {
+    font-size: 5.4rem;
+}
+
+.col-1 h3 {
+    font-size: 3rem;
+    color: #707070;
+    font-weight: 100;
+    margin: 2rem 0 1rem;
+}
+
+.col-1 p {
+    font-size: 1.6rem;
+    color: #b7b7b7;
+    font-weight: 100;
+}
+
+.col-1 h4 {
+    margin: 3rem 0;
+    font-size: 2rem;
+}
+
+button {
+    width: 14rem;
+    border: 0;
+    padding: 1.2rem 1rem;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: width 0.5s;
+}
+
+button img {
+    width: 3rem;
+    display: none;
+}
+
+button:hover img {
+    display: block;
+}
+
+button:hover {
+    width: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-1::after {
+    content: " ";
+    width: 1rem;
+    height: 57%;
+    background: linear-gradient(#ff469f, #ff6062);
+    position: absolute;
+    left: -4rem;
+    top: 0.8rem;
+}
+
+.col-2 {
+ position: relative;
+ flex-basis: 60%;
+ display: flex;
+ align-items: center;
+}
+
+.col-2 .controller {
+    width: 90%;
+}
+
+.color-box {
+    position: absolute;
+    right: top;
+    top: 0;
+    background: linear-gradient(to right, #ff54a2, #ff575a);
+    border-radius: 2rem 0 0 2rem;
+    height: 100%;
+    width: 80%;
+    z-index: -1;
+    transform: translateX(15rem);
+}
+.add-btn img {
+    width: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.add-btn {
+    text-align: center;
+    color: #fff;
+}
+
+.social-links img {
+    height: 1.3rem;
+    margin: 3rem 0;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.social-links {
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        width: 100%;
+        background: linear-gradient(to right, #ff54a2, #ff575a);
+        position: absolute;
+        top: 7.5rem;
+        right: 0;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    nav ul li a {
+        color: #fff;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menuList {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+        margin: 5rem 0;
+    }
+
+    .col-2 {
+        flex-basis: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .col-2 .controller {
+        width: 77%;
+    }
+
+    .color-box {
+        transform: translateX(7.5rem);
+    }
+
+    .col-1 {
+        flex-basis: 100%;
+    }
+
+    .col-1 h2 {
+        font-size: 3.5rem;
+    }
+
+    .col-1 h3 {
+        font-size: 1.5rem;
+    }
+}
